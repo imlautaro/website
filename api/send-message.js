@@ -3,6 +3,7 @@ const emailValidator = require('email-validator')
 const nodemailer = require('nodemailer')
 
 export default (req, res) => {
+	console.log(req)
 	if (req.body.name && req.body.email && req.body.message) {
 		if (emailValidator.validate(req.body.email)) {
 			const transporter = nodemailer.createTransport({
@@ -24,6 +25,7 @@ export default (req, res) => {
 			}
 			transporter.sendMail(mailOptions, (err, info) => {
 				if (err) {
+					console.error(err)
 					res.status(400).send('Ha ocurrido un error.')
 				} else {
 					res.status(201).send('Correo enviado.')
