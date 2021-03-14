@@ -38,7 +38,7 @@
 						Diseño y desarrollo Web con las mejores tecnologías
 					</h1>
 					<h2 class="text-lg md:text-2xl">
-						Rápidos, funcionales y elegantes.
+						Sitios Web rápidos, funcionales y elegantes.
 					</h2>
 					<nuxt-link
 						to="#contacto"
@@ -155,7 +155,7 @@
 				</div>
 				<div class="col-span-12 md:col-span-4">
 					<div
-						class="flex flex-col justify-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
+						class="flex flex-col justify-center items-center text-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
 					>
 						<span class="text-2xl font-bold">USD2ARS</span>
 						<p>
@@ -173,7 +173,7 @@
 				</div>
 				<div class="col-span-12 md:col-span-4">
 					<div
-						class="flex flex-col justify-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
+						class="flex flex-col justify-center items-center text-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
 					>
 						<span class="text-2xl font-bold">Sing4U</span>
 						<p>
@@ -191,7 +191,7 @@
 				</div>
 				<div class="col-span-12 md:col-span-4">
 					<div
-						class="flex flex-col justify-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
+						class="flex flex-col justify-center items-center text-center p-8 space-y-4 bg-gray-700 rounded-lg text-white"
 					>
 						<span class="text-2xl font-bold"
 							>Canto Sin Fronteras</span
@@ -274,15 +274,15 @@
 				</div>
 			</container>
 		</section>
-		<section class="h-screen bg-gray-800 text-white" id="contacto">
+		<section class="bg-gray-800 text-white" id="contacto">
 			<div
-				class="perspective flex items-center justify-center h-screen overflow-hidden relative"
+				class="perspective flex items-center justify-center py-16 overflow-hidden relative"
 			>
 				<div
-					class="absolute top-0 left-0 h-screen w-screen bg-gray-800 opacity-5 bg-2"
+					class="absolute top-0 left-0 h-full w-screen bg-gray-800 opacity-5 bg-2"
 				></div>
 				<div
-					class="absolute bg-gradient-to-b from-gray-800 to-transparent top-0 left-0 h-screen w-screen bg-transparent"
+					class="absolute bg-gradient-to-b from-gray-800 to-transparent top-0 left-0 h-full w-screen bg-transparent"
 				></div>
 				<container
 					class="z-10 text-center space-y-4 items-center flex flex-col justify-center"
