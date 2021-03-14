@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .perspective{
+        perspective: 8rem;
+    }
+}
+
+@layer components {
+    .btn{
+        @apply duration-100 outline-none px-4 py-2 rounded shadow-md transform;
+    }
+    .btn--large{
+        @apply px-8 py-4 rounded-lg text-xl;
+    }
+    .btn:hover{
+        @apply scale-105 shadow-lg;
+    }
+    .btn:active{
+        @apply scale-95 shadow;
+    }
+    .btn--primary{
+        @apply bg-gradient-to-br from-primary to-secondary ring-primary ring-opacity-25 text-white; 
+    }
+    .btn--primary:focus{
+        @apply outline-none ring-4;
+    }
+}
