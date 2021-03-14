@@ -3,7 +3,7 @@ const emailValidator = require('email-validator')
 const nodemailer = require('nodemailer')
 
 export default (req, res) => {
-	if ('name' in req.body && 'email' in req.body && 'message' && req.body) {
+	if (req.body.name && req.body.email && req.body.message) {
 		if (emailValidator.validate(req.body.email)) {
 			const transporter = nodemailer.createTransport({
 				service: 'gmail',
