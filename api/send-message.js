@@ -6,6 +6,7 @@ export default (req, res) => {
 	console.log(req)
 	if (req.body.name && req.body.email && req.body.message) {
 		if (emailValidator.validate(req.body.email)) {
+			console.log(process.env.GMAIL_USER)
 			const transporter = nodemailer.createTransport({
 				service: 'gmail',
 				auth: {
