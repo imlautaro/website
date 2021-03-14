@@ -3,7 +3,7 @@ const emailValidator = require('email-validator')
 const nodemailer = require('nodemailer')
 
 export default (req, res) => {
-	console.log(req)
+	console.log(req.body)
 	if (req.body.name && req.body.email && req.body.message) {
 		if (emailValidator.validate(req.body.email)) {
 			console.log(process.env.GMAIL_USER)
