@@ -42,7 +42,7 @@
 					</h2>
 					<nuxt-link
 						to="#contacto"
-						class="btn btn--large btn--primary"
+						class="btn flex w-min whitespace-nowrap mx-auto btn--large btn--primary"
 					>
 						Contacto
 					</nuxt-link>
@@ -392,7 +392,7 @@ export default Vue.extend({
 				if (validate(this.email)) {
 					// @ts-ignore
 					this.$axios
-						.post('/api/send-message', {
+						.post('https://imlautaro.vercel.app/api/send-message', {
 							name: this.name,
 							email: this.email,
 							message: this.message,
