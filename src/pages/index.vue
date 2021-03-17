@@ -40,12 +40,12 @@
 					<h2 class="text-lg md:text-2xl">
 						Sitios Web rápidos, funcionales y elegantes.
 					</h2>
-					<nuxt-link
-						to="#contacto"
+					<inpage-link
+						to="contacto"
 						class="btn flex w-min whitespace-nowrap mx-auto btn--large btn--primary"
 					>
 						Contacto
-					</nuxt-link>
+					</inpage-link>
 				</container>
 				<button
 					@click="scrollDown()"
@@ -233,7 +233,7 @@
 							compartir ideas en forma de artículos con el
 							público.
 						</p>
-						<span class="text-primary text-4xl">US$300</span>
+						<span class="text-primary text-4xl">US$240</span>
 					</div>
 				</div>
 				<div class="col-span-12 md:col-span-4 text-center">
@@ -247,7 +247,7 @@
 							marca.
 						</p>
 						<p>Ideal para nuevos proyectos / proyectos pequeños.</p>
-						<span class="text-primary text-4xl">US$100</span>
+						<span class="text-primary text-4xl">US$80</span>
 					</div>
 				</div>
 				<div class="col-span-12 md:col-span-4 text-center">
