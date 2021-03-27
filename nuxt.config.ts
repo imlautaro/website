@@ -6,6 +6,7 @@ export default {
 		'@nuxtjs/color-mode',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/pwa',
+		'@nuxtjs/prismic',
 	],
 	colorMode: {
 		classSuffix: '',
@@ -21,6 +22,9 @@ export default {
 	},
 	modules: ['@nuxtjs/axios'],
 	plugins: ['~/plugins/octicons'],
+	prismic: {
+		endpoint: 'https://imlautaro.cdn.prismic.io/api/v2',
+	},
 	pwa: {
 		manifest: {
 			display: 'browser',
