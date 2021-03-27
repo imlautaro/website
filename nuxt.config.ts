@@ -1,6 +1,7 @@
 export default {
 	buildModules: [
 		'@nuxt/typescript-build',
+		'@nuxtjs/composition-api',
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/color-mode',
 		'@nuxtjs/google-fonts',
@@ -10,6 +11,9 @@ export default {
 		classSuffix: '',
 	},
 	components: true,
+	generate: {
+		interval: 2000,
+	},
 	googleFonts: {
 		families: {
 			Overpass: [400, 700],
