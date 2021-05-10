@@ -19,9 +19,7 @@
 							class="flex space-x-4 items-center text-xl font-bold"
 						>
 							<isotype class="w-4" />
-							<span>
-								Lautaro Pereyra
-							</span>
+							<span> Lautaro Pereyra </span>
 						</div>
 						<a
 							href="https://github.com/imlautaro"
@@ -247,7 +245,7 @@
 							marca.
 						</p>
 						<p>Ideal para nuevos proyectos / proyectos pequeños.</p>
-						<span class="text-primary text-4xl">US$80</span>
+						<span class="text-primary text-4xl">US$90</span>
 					</div>
 				</div>
 				<div class="col-span-12 md:col-span-4 text-center">
