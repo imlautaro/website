@@ -374,6 +374,71 @@ import Vue from 'vue'
 import { validate } from 'email-validator'
 
 export default Vue.extend({
+	head() {
+		return {
+			title:
+				'Sitios Web rápidos y elegantes con bajo costo de mantenimiento | Lautaro Pereyra',
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content:
+						'Diseñador y desarrollador Web de Buenos Aires, Argentina.',
+				},
+				{
+					hid: 'twitter:title',
+					name: 'twitter:title',
+					content:
+						'Sitios Web rápidos y elegantes con bajo costo de mantenimiento | Lautaro Pereyra',
+				},
+				{
+					hid: 'twitter:description',
+					name: 'twitter:description',
+					content:
+						'Diseñador y desarrollador Web de Buenos Aires, Argentina.',
+				},
+				{
+					hid: 'twitter:image',
+					name: 'twitter:image',
+					content: 'https://imlautaro.com/featured-image.jpg',
+				},
+				{
+					hid: 'twitter:image:alt',
+					name: 'twitter:image:alt',
+					content:
+						'Sitios Web rápidos y elegantes con bajo costo de mantenimiento | Lautaro Pereyra',
+				},
+				{
+					hid: 'og:title',
+					property: 'og:title',
+					content:
+						'Sitios Web rápidos y elegantes con bajo costo de mantenimiento | Lautaro Pereyra',
+				},
+				{
+					hid: 'og:description',
+					property: 'og:description',
+					content:
+						'Diseñador y desarrollador Web de Buenos Aires, Argentina.',
+				},
+				{
+					hid: 'og:image',
+					property: 'og:image',
+					content: 'https://imlautaro.com/featured-image.jpg',
+				},
+				{
+					hid: 'og:image:secure_url',
+					property: 'og:image:secure_url',
+					content: 'https://imlautaro.com/featured-image.jpg',
+				},
+				{
+					hid: 'og:image:alt',
+					property: 'og:image:alt',
+					content:
+						'Sitios Web rápidos y elegantes con bajo costo de mantenimiento | Lautaro Pereyra',
+				},
+			],
+		}
+	},
 	data: () => ({
 		name: '',
 		message: '',
