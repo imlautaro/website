@@ -347,7 +347,7 @@
 							</svg>
 						</a>
 						<a
-							href="https://facebook.com/imlautaro"
+							href="https://facebook.com/imlautaro.ok"
 							target="_blank"
 							rel="nofollow"
 						>
