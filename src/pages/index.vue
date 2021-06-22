@@ -455,7 +455,7 @@ export default Vue.extend({
 				if (validate(this.email)) {
 					// @ts-ignore
 					this.$axios
-						.post('https://imlautaro.vercel.app/api/send-message', {
+						.post('https://imlautaro.com/api/send-message', {
 							name: this.name,
 							email: this.email,
 							message: this.message,
