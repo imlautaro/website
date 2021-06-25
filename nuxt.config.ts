@@ -1,12 +1,13 @@
-export default {
+import { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
 	buildModules: [
 		'@nuxt/typescript-build',
-		'@nuxtjs/composition-api',
+		'@nuxtjs/composition-api/module',
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/color-mode',
 		'@nuxtjs/google-fonts',
-		'@nuxtjs/pwa',
-		'@nuxtjs/prismic',
+		'@nuxtclub/octicons',
 	],
 	colorMode: {
 		classSuffix: '',
@@ -16,25 +17,28 @@ export default {
 		interval: 2000,
 	},
 	googleFonts: {
+		display: 'swap',
 		families: {
-			Overpass: [400, 700],
+			'Titillium+Web': [400, 700],
 		},
+	},
+	head: {
+		meta: [
+			{
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1.0',
+			},
+		],
+		link: [
+			{
+				rel: 'icon',
+				href: '/icon.png',
+			},
+		],
 	},
 	modules: ['@nuxtjs/axios'],
-	plugins: ['~/plugins/octicons'],
-	prismic: {
-		endpoint: 'https://imlautaro.cdn.prismic.io/api/v2',
-	},
-	pwa: {
-		manifest: {
-			display: 'browser',
-			lang: 'es-AR',
-			name: 'Lautaro Pereyra',
-			start_url: '/',
-			theme_color: process.env.COLOR_PRIMARY || '#FF0000',
-		},
-		workbox: false,
-	},
 	srcDir: 'src',
 	target: 'static',
 }
+
+export default config

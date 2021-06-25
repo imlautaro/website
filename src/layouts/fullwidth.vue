@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<ui-menu />
-		<layout-navigation />
 		<ui-scroll-indicator />
 		<nuxt />
 		<go-to-top />

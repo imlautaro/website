@@ -2,29 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .perspective{
-        perspective: 8rem;
-    }
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+@layer utilities {
+	.perspective {
+		perspective: 8rem;
+	}
 }
 
 @layer components {
-    .btn{
-        @apply duration-100 outline-none px-4 py-2 rounded shadow-md transform;
-    }
-    .btn--large{
-        @apply px-8 py-4 rounded-lg text-xl;
-    }
-    .btn:hover{
-        @apply scale-105 shadow-lg;
-    }
-    .btn:active{
-        @apply scale-95 shadow;
-    }
-    .btn--primary{
-        @apply bg-gradient-to-br from-primary to-secondary ring-primary ring-opacity-25 text-white; 
-    }
-    .btn--primary:focus{
-        @apply outline-none ring-4;
-    }
+	.btn {
+		@apply duration-100 font-semibold outline-none px-4 py-2 ring-0 rounded-md shadow-md transform;
+	}
+	.btn:focus {
+		@apply outline-none ring-4;
+	}
+	.btn:hover {
+		@apply scale-105 shadow-lg;
+	}
+	.btn:active {
+		@apply scale-95 shadow;
+	}
+	.btn--large {
+		@apply px-8 py-4 rounded-lg text-xl;
+	}
+	.btn--primary {
+		@apply bg-gradient-to-br from-primary to-secondary ring-primary ring-opacity-25 text-white;
+	}
+	.nav-item {
+		@apply duration-100 px-4 py-2 rounded-md text-opacity-75 text-white;
+	}
+	.nav-item.nuxt-link-active {
+		@apply text-opacity-100 text-white;
+	}
+	.nav-item:hover {
+		@apply bg-white bg-opacity-5;
+	}
 }

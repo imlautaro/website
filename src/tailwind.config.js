@@ -11,16 +11,16 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			sans: ['Overpass', 'sans-serif'],
+			sans: ['"Titillium Web"', 'sans-serif'],
 		},
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem',
 		},
 		extend: {
 			colors: {
-				primary: process.env.COLOR_PRIMARY || colors.blue[600],
-				secondary: process.env.COLOR_SECONDARY || colors.purple[600],
+				primary: '#F25E0D',
+				secondary: '#F20D5E',
 			},
 		},
 	},
@@ -31,5 +31,5 @@ module.exports = {
 			display: ['group-hover'],
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }
