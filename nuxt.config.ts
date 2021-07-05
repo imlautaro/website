@@ -39,7 +39,15 @@ const config: NuxtConfig = {
 			},
 		],
 	},
-	modules: ['@nuxtjs/axios', '@nuxt/content', '@nuxtjs/gtm'],
+	modules: [
+		'@nuxtjs/axios',
+		'@nuxt/content',
+		'@nuxtjs/gtm',
+		'@nuxtjs/robots',
+	],
+	robots: {
+		Sitemap: `https://${process.env.DOMAIN}/sitemap.xml`,
+	},
 	srcDir: 'src',
 	target: 'static',
 }
