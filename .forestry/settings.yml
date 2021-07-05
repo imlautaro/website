@@ -15,9 +15,9 @@ sections:
   create: documents
   match: "**/*"
 upload_dir: uploads
-public_path: "/uploads"
+public_path: https://imlautaro.s3.us-east-2.amazonaws.com/uploads
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   install_dependencies_command: npm install
