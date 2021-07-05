@@ -1,6 +1,7 @@
 import { NuxtConfig } from '@nuxt/types'
 
 import { createSitemapRoutes } from './src/utils/sitemap'
+import { createFeed } from './src/utils/feed'
 
 const config: NuxtConfig = {
 	buildModules: [
@@ -15,6 +16,14 @@ const config: NuxtConfig = {
 		classSuffix: '',
 	},
 	components: true,
+	feed: [
+		{
+			path: '/feed.xml',
+			create: createFeed,
+			cacheTime: 1000 * 60 * 15,
+			type: 'rss2',
+		},
+	],
 	generate: {
 		interval: 2000,
 	},
@@ -47,6 +56,7 @@ const config: NuxtConfig = {
 		'@nuxtjs/gtm',
 		'@nuxtjs/robots',
 		'@nuxtjs/sitemap',
+		'@nuxtjs/feed',
 	],
 	robots: {
 		Sitemap: `https://${process.env.DOMAIN}/sitemap.xml`,
