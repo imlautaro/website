@@ -1,5 +1,7 @@
 import { NuxtConfig } from '@nuxt/types'
 
+import { createSitemapRoutes } from './src/utils/sitemap'
+
 const config: NuxtConfig = {
 	buildModules: [
 		'@nuxt/typescript-build',
@@ -44,9 +46,15 @@ const config: NuxtConfig = {
 		'@nuxt/content',
 		'@nuxtjs/gtm',
 		'@nuxtjs/robots',
+		'@nuxtjs/sitemap',
 	],
 	robots: {
 		Sitemap: `https://${process.env.DOMAIN}/sitemap.xml`,
+	},
+	sitemap: {
+		hostname: `https://${process.env.DOMAIN}`,
+		routes: createSitemapRoutes,
+		trailingSlash: false,
 	},
 	srcDir: 'src',
 	target: 'static',
