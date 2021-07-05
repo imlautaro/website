@@ -10,36 +10,17 @@
 					<octicons name="x" size="16" />
 				</button>
 			</div>
-			<InpageLink
+			<ui-menu-item to="/blog" @navigate="menu = false">
+				Blog
+			</ui-menu-item>
+			<ui-menu-item
+				v-for="page in pages"
+				:key="page.slug"
+				:to="`/${page.slug}`"
 				@navigate="menu = false"
-				class="px-8 py-4 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
-				to="who"
-				>Who we are?</InpageLink
 			>
-			<InpageLink
-				@navigate="menu = false"
-				class="px-8 py-4 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
-				to="what"
-				>What we do?</InpageLink
-			>
-			<InpageLink
-				@navigate="menu = false"
-				class="px-8 py-4 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
-				to="products"
-				>Our products</InpageLink
-			>
-			<InpageLink
-				@navigate="menu = false"
-				class="px-8 py-4 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
-				to="where"
-				>Where we are?</InpageLink
-			>
-			<InpageLink
-				@navigate="menu = false"
-				class="px-8 py-4 hover:bg-black hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
-				to="contact"
-				>Contact</InpageLink
-			>
+				{{ page.title }}
+			</ui-menu-item>
 		</div>
 	</transition>
 </template>
@@ -56,14 +37,18 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useAsync } from '@nuxtjs/composition-api'
 import useUI from '~/composables/ui'
 
 export default defineComponent({
 	setup() {
 		const { menu } = useUI()
 
-		return { menu }
+		const { $content } = useContext()
+
+		const pages = useAsync(() => $content('pages').fetch())
+
+		return { menu, pages }
 	},
 })
 </script>
