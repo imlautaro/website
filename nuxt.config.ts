@@ -36,7 +36,7 @@ const config: NuxtConfig = {
 			},
 		],
 	},
-	modules: ['@nuxtjs/axios'],
+	modules: ['@nuxtjs/axios', '@nuxt/content'],
 	srcDir: 'src',
 	target: 'static',
 }

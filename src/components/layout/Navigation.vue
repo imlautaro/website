@@ -7,8 +7,13 @@
 			<brand-imagotype />
 			<div class="hidden sm:flex items-center text-sm">
 				<nuxt-link class="nav-item" to="/blog">Blog</nuxt-link>
-				<nuxt-link class="nav-item" to="/desarrollo-web">
-					Desarrollo Web
+				<nuxt-link
+					v-for="page in pages"
+					:key="page.slug"
+					class="nav-item"
+					:to="`/${page.slug}`"
+				>
+					{{ page.title }}
 				</nuxt-link>
 			</div>
 			<button
@@ -22,13 +27,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useAsync } from '@nuxtjs/composition-api'
 import useUI from '~/composables/ui'
 
 export default defineComponent({
 	setup() {
 		const { menu } = useUI()
-		return { menu }
+
+		const { $content } = useContext()
+
+		const pages = useAsync(() => $content('pages').fetch())
+
+		return { menu, pages }
 	},
 })
 </script>

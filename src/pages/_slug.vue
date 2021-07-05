@@ -1,24 +1,24 @@
 <template>
 	<div>
-		<h1>{{ article.title }}</h1>
-		<nuxt-content :document="article" />
+		<h1>{{ page.title }}</h1>
+		<nuxt-content :document="page" />
 	</div>
 </template>
 
 <script>
 export default {
 	async asyncData({ params, $content, error }) {
-		let article
+		let page
 		try {
-			article = await $content('articles', params.slug).fetch()
+			page = await $content('pages', params.slug).fetch()
 		} catch {
 			return error({ statusCode: 404, message: 'Page not found' })
 		}
-		return { article }
+		return { page }
 	},
 	head() {
 		return {
-			title: this.article.seotitle,
+			title: this.page.seotitle,
 		}
 	},
 }
