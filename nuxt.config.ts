@@ -3,6 +3,8 @@ import { NuxtConfig } from '@nuxt/types'
 import { createSitemapRoutes } from './src/utils/sitemap'
 import { createFeed } from './src/utils/feed'
 
+const colors = require('tailwindcss/colors')
+
 const config: NuxtConfig = {
 	buildModules: [
 		'@nuxt/typescript-build',
@@ -41,6 +43,10 @@ const config: NuxtConfig = {
 			{
 				name: 'viewport',
 				content: 'width=device-width, initial-scale=1.0',
+			},
+			{
+				name: 'theme-color',
+				content: colors.coolGray[800],
 			},
 		],
 		link: [
