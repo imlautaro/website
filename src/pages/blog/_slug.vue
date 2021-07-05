@@ -1,5 +1,10 @@
 <template>
 	<div>
+		<social-head
+			:title="article.title"
+			:description="article.description"
+			:image="article.image"
+		/>
 		<h1>{{ article.title }}</h1>
 		<nuxt-content :document="article" />
 	</div>

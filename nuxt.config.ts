@@ -58,6 +58,9 @@ const config: NuxtConfig = {
 		'@nuxtjs/sitemap',
 		'@nuxtjs/feed',
 	],
+	publicRuntimeConfig: {
+		domain: process.env.DOMAIN,
+	},
 	robots: {
 		Sitemap: `https://${process.env.DOMAIN}/sitemap.xml`,
 	},
