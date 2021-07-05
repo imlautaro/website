@@ -22,6 +22,9 @@ const config: NuxtConfig = {
 			'Titillium+Web': [400, 700],
 		},
 	},
+	gtm: {
+		id: process.env.GTM_ID,
+	},
 	head: {
 		meta: [
 			{
@@ -36,7 +39,7 @@ const config: NuxtConfig = {
 			},
 		],
 	},
-	modules: ['@nuxtjs/axios', '@nuxt/content'],
+	modules: ['@nuxtjs/axios', '@nuxt/content', '@nuxtjs/gtm'],
 	srcDir: 'src',
 	target: 'static',
 }
