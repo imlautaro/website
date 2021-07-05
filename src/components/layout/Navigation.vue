@@ -1,8 +1,5 @@
 <template>
-	<nav
-		class="bg-gray-800 shadow sticky text-white top-0 z-10"
-		role="navigation"
-	>
+	<nav class="bg-gray-800 shadow text-white z-10" role="navigation">
 		<ui-container class="flex items-center justify-between py-4">
 			<brand-imagotype />
 			<div class="hidden sm:flex items-center text-sm">
