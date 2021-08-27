@@ -165,7 +165,7 @@
 						</p>
 						<a
 							class="underline"
-							href="https://usd2ars.vercel.app"
+							href="https://usd2ars.web.app"
 							target="_blank"
 							>Ver proyecto</a
 						>
@@ -183,7 +183,7 @@
 						</p>
 						<a
 							class="underline"
-							href="https://sing4u.cantosinfronteras.com"
+							href="https://sing4u.app"
 							target="_blank"
 							>Ver proyecto</a
 						>
